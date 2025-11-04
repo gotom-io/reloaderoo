@@ -248,6 +248,9 @@ Examples:
         process.on('SIGINT', () => shutdown('SIGINT'));
         process.on('SIGTERM', () => shutdown('SIGTERM'));
         
+        process.on('SIGUSR2', async () => {
+          await proxyInstance.handleRestartServer({force: true})
+        });
         // Start proxy
         await proxyInstance.start();
         

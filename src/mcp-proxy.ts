@@ -382,7 +382,7 @@ export class MCPProxy {
   /**
    * Handle restart_server tool call
    */
-  private async handleRestartServer(args: any): Promise<CallToolResult> {
+  public async handleRestartServer(args: any): Promise<CallToolResult> {
     const force = args?.force || false;
 
     try {
