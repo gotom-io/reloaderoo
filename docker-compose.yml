@@ -1,0 +1,6 @@
+services:
+  reloaderoo:
+    image: node:24
+    tty: true
+    volumes:
+      - ./:/app
